@@ -1,0 +1,13 @@
+﻿1&You have finally recovered from your bad breakup. How would you like to meet potential partners?&Go to a bar&2&Try your luck on a dating website&3&Ask your best friend to hook a girl up&4
+2&Go to a bar. Someone has sent over a drink.&Accept the drink&6&Completely ignore&5&na&0
+3&Try your luck on a dating app&Swipe left and deny&5&Swipe right and chat&6&na&0
+4&Ask your best friend to hook a girl up&You are not attracted to this potential date&5&You accept this new person's contact information&6&na&0
+5&You avoided being with a psycopath!&na&0&na&0&na&0
+6&You have started having a conversation with this person. You now know them better than you did before.&Accept a date&8&Politely decline from any further interactions&7&na&0
+7&You have declined any further interaction. Before you leave, they would like to ask for another chance.&You have decided to give them a chance and agree to a date.&8&You refuse yet again.&12&You slap them for the audacity to ask for another date after how they acted.&13
+8&You have accepted the date. Now the only question is: Where should you guys go?&Candle-lit dinner&9&Nightly walk/picnic on the beach&10&Take you to an amusement park&11
+9&You have chosen a candle lit dinner! Great choice. You're date turns out to be a really good cook. The food is fantastic, and the conversation is even better.&na&0&na&0&na&0
+10&You have decided to have a picnic a nightly stroll on the beach. The picnic was wonderful! You have started your walk on the beach.&na&0&na&0&na&0
+11&Sorry, this part has not been developed yet… :(&na&0&na&0&na&0
+12&Being polite pays off! You have safely avoided angering a psychopath.&na&0&na&0&na&0
+13&You have angered a psychopath! On your walk home, you are brutally stabbed to death.&na&0&na&0&na&0

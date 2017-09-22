@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">To Love A Psycho</string>
+    <string name="hint1">Tap anywhere to start...</string>
+    <string name="greeting">Hello, Stranger.</string>
+</resources>

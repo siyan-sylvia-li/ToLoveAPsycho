@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/buttonx"
+        android:layout_height="@dimen/buttony"
+        android:src="@mipmap/splash_1"
+        android:id="@+id/bloodsplash"/>
+    <TextView
+        android:layout_width="@dimen/textarea"
+        android:layout_height="@dimen/textarea"
+        android:id="@+id/index"
+        android:textSize="@dimen/actual"
+        android:layout_marginLeft="@dimen/textarea"
+        android:layout_marginTop="@dimen/textarea"
+        android:fontFamily="cursive"
+        />
+
+    <TextView
+        android:layout_width="@dimen/choicex"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice_description"
+        android:textSize="@dimen/actual"
+        android:layout_alignTop="@+id/index"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="cursive"/>
+
+</RelativeLayout>
