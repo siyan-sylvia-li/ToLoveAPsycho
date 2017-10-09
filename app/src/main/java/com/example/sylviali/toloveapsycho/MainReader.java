@@ -30,6 +30,9 @@ public class MainReader {
 				statement = statement.substring(
 						9, statement.length() - 3);
 			}
+			if(statement.contains("{")) {
+				statement = statement.substring(0, statement.indexOf("{"));
+			}
 			//System.out.println(statement);
 			content = content.substring(content.indexOf("</object>"));
 			bookPages.add(fileWriter(statement, numStr));

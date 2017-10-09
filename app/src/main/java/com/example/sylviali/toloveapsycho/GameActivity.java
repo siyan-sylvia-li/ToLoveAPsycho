@@ -2,6 +2,7 @@ package com.example.sylviali.toloveapsycho;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -84,7 +86,10 @@ public class GameActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     pageIndex = cl.getPage() - 1;
+                    overridePendingTransition(0, 0);
+                    starterIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     finish();
+                    overridePendingTransition(0, 0);
                     startActivity(starterIntent);
                 }
             });
@@ -103,15 +108,23 @@ public class GameActivity extends AppCompatActivity {
         if (gameOver) {
             ImageView survived_meme = (ImageView) findViewById(R.id.survived);
             survived_meme.setVisibility(View.VISIBLE);
-            // Different pics
-            survived_meme.setImageURI(Uri.parse(pages.get(pageIndex).getMotherNode().getIndex() + ".jpg"));
-            sbox.setMaxHeight(1000);
+            // Different pics per ending
+            Log.d("ID NUM:", pages.get(pageIndex).getMotherNode().getIndex());
+            String picName = "p" + pages.get(pageIndex).getMotherNode().getIndex();
+            int picId = getResources().getIdentifier(picName, "drawable", getPackageName());
+            survived_meme.setImageResource(picId);
+
+            sbox.setMaxHeight(500);
             mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     Intent i = new Intent(getApplicationContext(), GameOverActivity.class);
+                    overridePendingTransition(0, 0);
+                    i.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    overridePendingTransition(0, 0);
                     startActivity(i);
                     finish();
+                    // Determine length of delay based on length of description
                 }
             }, pages.get(pageIndex).getMotherNode().getDescription().length() * 100);
         }
@@ -133,4 +146,5 @@ public class GameActivity extends AppCompatActivity {
         pages = mr.bookPages;
         pages.sort(new PageComparator());
     }
+
 }

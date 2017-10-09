@@ -16,13 +16,12 @@ public class BeginnerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beginner);
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Before you play...");
-        builder.setMessage("I coded this game in approximately five hours. Therefore, the game is not very fancy or well-developed. \n" +
-                "Please forgive little glitches, such as the game may start over automatically if a part of storyline is not created yet. Thank you!");
-        builder.setPositiveButton("OK", null);
-        builder.setNegativeButton("", null);
-        builder.show();
+//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//        builder.setTitle("Before you play...");
+//        builder.setMessage("Thank you!");
+//        builder.setPositiveButton("OK", null);
+//        builder.setNegativeButton("", null);
+//        builder.show();
 
         TextView tx = (TextView)findViewById(R.id.TitleP);
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/Engagement-Regular.ttf");
